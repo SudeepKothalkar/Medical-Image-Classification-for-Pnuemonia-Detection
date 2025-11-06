@@ -193,12 +193,26 @@ def build_efficientnet_model():
 # PART 3: TRAINING FUNCTIONS
 # ============================================================================
 
+#def compile_model(model):
+#   """Compile model with optimizer and loss"""
+#    model.compile(
+#        optimizer=keras.optimizers.Adam(learning_rate=config.LEARNING_RATE),
+#        loss='binary_crossentropy',
+#        metrics=['accuracy', keras.metrics.Precision(), keras.metrics.Recall(), keras.metrics.AUC()]
+#    )
+#    return model
+
 def compile_model(model):
     """Compile model with optimizer and loss"""
     model.compile(
         optimizer=keras.optimizers.Adam(learning_rate=config.LEARNING_RATE),
         loss='binary_crossentropy',
-        metrics=['accuracy', keras.metrics.Precision(), keras.metrics.Recall(), keras.metrics.AUC()]
+        metrics=[
+            'accuracy', 
+            keras.metrics.Precision(name='precision'),
+            keras.metrics.Recall(name='recall'),
+            keras.metrics.AUC(name='auc')
+        ]
     )
     return model
 
