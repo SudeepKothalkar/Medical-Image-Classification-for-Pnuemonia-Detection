@@ -49,25 +49,25 @@ Create a `requirements.txt` file:
 
 ```txt
 # Deep Learning
-tensorflow==2.0.2
-keras==2.14.0
+tensorflow
+keras
 
 # Data Science
-numpy==1.24.3
-pandas==2.0.3
-matplotlib==3.7.2
-seaborn==0.12.2
-scikit-learn==1.3.0
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
 
 # Computer Vision
-opencv-python==4.8.0.76
-Pillow==10.0.0
+opencv-python
+Pillow
 
 # Web Application
-streamlit==1.51.0
+streamlit
 
 # Utilities
-tqdm==4.67.1
+tqdm
 ```
 
 Install packages:
